@@ -7,14 +7,14 @@ import (
 	"github.com/onsi/gomega"
 )
 
-func TestPositive(t *testing.T) {
+func TestNegaitive1(t *testing.T) {
 
-	t.Run("Check Positive", func(t *testing.T) {
+	t.Run("Check Negative1", func(t *testing.T) {
 		g := gomega.NewGomegaWithT(t)
 		employ := entity.Employees{
 			Name: "boss",
 			Salary: 10000,
-			EmployeeCode: "B6639808",
+			EmployeeCode: "BB4450",
 		}
 		ok ,err := govalidator.ValidateStruct(employ)
 
@@ -22,5 +22,5 @@ func TestPositive(t *testing.T) {
 		g.Expect(err).ToNot(gomega.BeNil())
 		g.Expect(err.Error()).To(gomega.Equal("Salary must be between 15000 and 200000"))
 	})
-	
+
 }
