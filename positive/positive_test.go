@@ -1,0 +1,24 @@
+package positive
+
+import (
+	"testing"
+	"se-test/entity"
+	"github.com/asaskevich/govalidator"
+	"github.com/onsi/gomega"
+)
+
+func TestPositive(t *testing.T) {
+
+	t.Run("Check Positive", func(t *testing.T) {
+		g := gomega.NewGomegaWithT(t)
+		employ := entity.Employees{
+			Name: "boss",
+			Salary: 17000,
+			EmployeeCode: "B6639808",
+		}
+		ok ,err := govalidator.ValidateStruct(employ)
+
+		g.Expect(ok).To(gomega.BeTrue())
+		g.Expect(err).To(gomega.BeNil())
+	})
+}
