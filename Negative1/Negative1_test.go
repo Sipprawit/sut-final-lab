@@ -14,7 +14,7 @@ func TestNegaitive1(t *testing.T) {
 		employ := entity.Employees{
 			Name: "boss",
 			Salary: 10000,
-			EmployeeCode: "BB4450",
+			EmployeeCode: "BB-4450",
 		}
 		ok ,err := govalidator.ValidateStruct(employ)
 

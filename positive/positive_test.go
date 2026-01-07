@@ -15,7 +15,7 @@ func TestPositive(t *testing.T) {
 		employ := entity.Employees{
 			Name:         "boss",
 			Salary:       17000,
-			EmployeeCode: "BB1111",
+			EmployeeCode: "BB-4450",
 		}
 		ok, err := govalidator.ValidateStruct(employ)
 
